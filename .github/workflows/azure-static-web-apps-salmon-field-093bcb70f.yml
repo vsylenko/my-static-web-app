@@ -18,8 +18,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
-      - name: Set  NODE_OPTIONS 
-        run: export NODE_OPTIONS=--openssl-legacy-provider
+      - name: npm audit fix --force 
+        run: npm audit fix --force
         shell: bash          
       - name: Build And Deploy
         id: builddeploy
